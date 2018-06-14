@@ -33,8 +33,8 @@ int main(int argc, const char * argv[]) {
     int exist = 0;
     float valore = 0;
     unsigned long m=0, n=0;
-    long mMAX = 0;
-    long nMAX = 0;
+    unsigned long mMAX = 0;
+    unsigned long nMAX = 0;
     int FIMFLAG = 0;
     int menuselect = 0;
     void menu(void);
