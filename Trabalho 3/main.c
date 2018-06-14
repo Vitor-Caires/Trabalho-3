@@ -185,7 +185,7 @@ int main(int argc, const char * argv[]) {
 }
 
 void menu(void){
-    printf("\n >>> Aperte para uma tecla para continuar <<< \n\n");
+    printf("\n >>> Aperte enter para continuar <<< \n\n");
     setbuf(stdin,0);
     getchar();
     printf("1) Criar Matriz \n");
