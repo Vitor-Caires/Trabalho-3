@@ -82,6 +82,7 @@ int main(int argc, const char * argv[]) {
                 }else{
                     printf("Sem matriz para deletar.. \n");
                 }
+                break;
                 
             case 3:
                 setbuf(stdin, 0);
