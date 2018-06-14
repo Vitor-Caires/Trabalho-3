@@ -18,8 +18,8 @@ struct celula {
 
 typedef struct celula cell;
 
-long somaM = 0;
-long somaN = 0;
+float somaM = 0;
+float somaN = 0;
 cell *p1;
 cell *ptemp;
 void addcellREC(cell *point,unsigned long M,unsigned long N, float VALOR);
@@ -53,7 +53,10 @@ int main(int argc, const char * argv[]) {
         switch (menuselect) {
                 
             case 1:
-                if(exist == 0){
+                if(exist == 1){
+                    printf("Matriz ja existente! \n");
+                    break;
+                }
                 setbuf(stdin, 0);
                 printf("Digite o valor de m da sua matriz: \n");
                 scanf("%ld",&mMAX);
@@ -64,13 +67,13 @@ int main(int argc, const char * argv[]) {
                 mMAX--;
                 printf("Matriz criada! \n");
                     exist = 1;
-                }else{
-                    printf("Matriz ja existente! \n");
-                }
                 break;
                 
             case 2:
-                if(exist == 1){
+                if(exist == 0){
+                    printf("Matriz inexistente! \n");
+                    break;
+                }
                 printf("Liberando matriz... \n");
                 BREAKFREE(p1);
                 if(p1 -> prox == NULL){
@@ -79,12 +82,13 @@ int main(int argc, const char * argv[]) {
                 }else{
                     printf("Erro ao deletar matriz");
                 }
-                }else{
-                    printf("Sem matriz para deletar.. \n");
-                }
                 break;
                 
             case 3:
+                if(exist == 0){
+                    printf("Matriz inexistente! \n");
+                    break;
+                }
                 setbuf(stdin, 0);
                 while(1){
                     printf("Indique m para consulta: \n");
@@ -103,6 +107,11 @@ int main(int argc, const char * argv[]) {
                 break;
                 
             case 4:
+                if(exist == 0)
+                {
+                    printf("Matriz inexistente! \n");
+                    break;
+                }
                 somaN = 0;
                 somaM = 0;
                 while(1){
@@ -115,6 +124,11 @@ int main(int argc, const char * argv[]) {
                 break;
                 
             case 5:
+                if(exist == 0)
+                {
+                    printf("Matriz inexistente! \n");
+                    break;
+                }
                 somaN = 0;
                 somaM = 0;
                 while(1){
@@ -127,6 +141,9 @@ int main(int argc, const char * argv[]) {
                 break;
                 
             case 6:
+                if(exist == 0){
+                    printf("Matriz inexistente! \n");
+                    break;}
                 setbuf(stdin, 0);
                 while(1){
                     printf("Indique a posicao m: \n");
